@@ -73,11 +73,20 @@ class LunchBot extends React.Component {
             I&apos;m not feeling it&hellip;
           </button>
         )}
-        <div className="idempotent">
-          This link gives others the same options:
-          <a href={href}>{href}</a>
-        </div>
+        {startingSeed !== seed && (
+          <div className="idempotent">
+            This link gives others your new options:
+            <a href={href}>{href}</a>
+          </div>
+        )}
+
         <footer>
+          {startingSeed === seed && (
+            <>
+              The Lunchbot makes a new suggestion every day.
+              <br />
+            </>
+          )}
           A fun little thing by <a href="https://brandon.wang">Brandon Wang</a>.
         </footer>
       </div>
