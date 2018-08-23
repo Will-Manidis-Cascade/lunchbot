@@ -439,12 +439,12 @@
       "host": "localhost",
       "pathPrefix": "/lunchbot",
       "polyfill": true,
-      "buildTime": "2018-08-23T22:22:30.994Z",
+      "buildTime": "2018-08-23T22:26:12.643Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "df784fff2760272f4022555e517f496d",
+        "contentDigest": "6a3718577dee1da70fcb9c9deb2e34b7",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
