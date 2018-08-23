@@ -1,0 +1,14 @@
+{
+  "name": "lunchbot",
+  "description": "The Harvard Square lunchbot",
+  "scripts": {
+    "develop": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve"
+  },
+  "dependencies": {
+    "gatsby": "next",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
+  }
+}
