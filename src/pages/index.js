@@ -1,5 +1,5 @@
 import React from 'react';
-import _ from 'lodash';
+import SeededShuffle from 'seededshuffle';
 
 import '../components/index/index.scss';
 
@@ -19,18 +19,20 @@ const LUNCH_SPOTS = [
   'Tatte Bakery (sandwiches + salads)',
 ];
 
+const now = new Date();
+const startingSeed = btoa(
+  `${now.getFullYear()}-${now.getMonth()}-${now.getDate()}`,
+).slice(0, 10);
+
 class LunchBot extends React.Component {
   state = {
+    seed: this.props.location.search ? this.props.location.search.slice(1) : startingSeed,
     isMoreShown: false,
-    selection: [],
   };
 
-  componentDidMount() {
-    this.onNewBatch();
-  }
-
-  onNewBatch = () => {
-    this.setState({ isMoreShown: false, selection: _.sampleSize(LUNCH_SPOTS, 3) });
+  onNewSeed = () => {
+    const seed = btoa(Math.random() * 999999).slice(0, 10);
+    this.setState({ seed, isMoreShown: false });
   };
 
   onShowMore = () => {
@@ -38,7 +40,15 @@ class LunchBot extends React.Component {
   };
 
   render() {
-    const { selection, isMoreShown } = this.state;
+    console.log(this.props);
+    const { location } = this.props;
+    const { seed, isMoreShown } = this.state;
+
+    // Get idempotent link
+    const href = location.origin + location.pathname + '?' + seed;
+
+    // Get shuffled list
+    const selection = SeededShuffle.shuffle(LUNCH_SPOTS, seed, true);
 
     return (
       <div className="LunchBot">
@@ -52,7 +62,7 @@ class LunchBot extends React.Component {
           ))}
         </ul>
         {isMoreShown ? (
-          <button key={1} className="btn btn-outline-success" onClick={this.onNewBatch}>
+          <button key={1} className="btn btn-outline-success" onClick={this.onNewSeed}>
             Give me new options&hellip;
           </button>
         ) : (
@@ -60,7 +70,10 @@ class LunchBot extends React.Component {
             I&apos;m not feeling it&hellip;
           </button>
         )}
-        <hr />
+        <div className="idempotent">
+          This link will give someone else the same options:
+          <a href={href}>{href}</a>
+        </div>
         <footer>
           A fun little thing by <a href="https://brandon.wang">Brandon Wang</a>.
         </footer>

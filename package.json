@@ -10,7 +10,8 @@
   "dependencies": {
     "lodash": "^4.17.10",
     "react": "^16.4.2",
-    "react-dom": "^16.4.2"
+    "react-dom": "^16.4.2",
+    "seededshuffle": "^0.2.0"
   },
   "devDependencies": {
     "gatsby": "next",
