@@ -1,6 +1,5 @@
 import React from 'react';
 import SeededShuffle from 'seededshuffle';
-
 import '../components/index/index.scss';
 
 const LUNCH_SPOTS = [
@@ -20,9 +19,9 @@ const LUNCH_SPOTS = [
 ];
 
 const now = new Date();
-const startingSeed = btoa(
-  `${now.getFullYear()}-${now.getMonth()}-${now.getDate()}`,
-).slice(0, 10);
+const startingSeed = Number(
+  `${now.getFullYear()}${now.getMonth()}${now.getDate()}`,
+).toString(36);
 
 class LunchBot extends React.Component {
   state = {
@@ -31,7 +30,9 @@ class LunchBot extends React.Component {
   };
 
   onNewSeed = () => {
-    const seed = btoa(Math.random() * 999999).slice(0, 10);
+    const seed = Date.now()
+      .toString(36)
+      .slice(0, 10);
     this.setState({ seed, isMoreShown: false });
   };
 

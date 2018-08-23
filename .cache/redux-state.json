@@ -439,12 +439,12 @@
       "host": "localhost",
       "pathPrefix": "/lunchbot",
       "polyfill": true,
-      "buildTime": "2018-08-23T21:47:40.512Z",
+      "buildTime": "2018-08-23T22:12:14.036Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "45eb24ad958fff1e39fdbb47b0c0afde",
+        "contentDigest": "6b6e19c6c5d49ff59b3485a686d328a3",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -483,13 +483,13 @@
     "index": "173/path---index-6a9-NZuapzHg3X9TaN1iIixfv1W23E"
   },
   "components": {
-    "/Users/bw/Documents/bw/lunchbot/.cache/dev-404-page.js": {
-      "query": "",
-      "componentPath": "/Users/bw/Documents/bw/lunchbot/.cache/dev-404-page.js"
-    },
     "/Users/bw/Documents/bw/lunchbot/src/pages/index.js": {
       "query": "",
       "componentPath": "/Users/bw/Documents/bw/lunchbot/src/pages/index.js"
+    },
+    "/Users/bw/Documents/bw/lunchbot/.cache/dev-404-page.js": {
+      "query": "",
+      "componentPath": "/Users/bw/Documents/bw/lunchbot/.cache/dev-404-page.js"
     }
   },
   "staticQueryComponents": {}
