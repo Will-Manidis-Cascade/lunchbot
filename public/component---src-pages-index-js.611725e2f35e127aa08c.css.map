@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/components/index/index.scss"],"names":[],"mappings":"AAAA,UAAU,iBAAiB,gBAAgB,uBAAuB,cAAc,eAAe,aAAa,c","file":"component---src-pages-index-js.611725e2f35e127aa08c.css","sourcesContent":[".LunchBot{margin:50px auto;max-width:600px}.LunchBot h1.pageTitle{color:#ba5d16;font-size:40px}.LunchBot hr{margin:50px 0}"],"sourceRoot":""}

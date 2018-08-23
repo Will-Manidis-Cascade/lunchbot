@@ -1,0 +1,44 @@
+$color-primary: #ba5d16;
+
+.LunchBot {
+  margin: 50px auto;
+  max-width: 600px;
+
+  h1.pageTitle {
+    font-size: 40px;
+    color: $color-primary;
+  }
+
+  hr {
+    margin: 50px 0;
+  }
+
+  .placesList {
+    list-style: none;
+    margin: 30px 0;
+    padding: 0;
+
+    & > li {
+      $borderRadius: 5px;
+      $borderColor: #eee;
+
+      border: 1px solid $borderColor;
+      border-bottom: none;
+      padding: 10px 14px;
+
+      &.-primary {
+        background: #f5f5f5;
+        font-weight: 600;
+      }
+
+      &:first-child {
+        border-radius: $borderRadius $borderRadius 0 0;
+      }
+
+      &:last-child {
+        border-radius: 0 0 $borderRadius $borderRadius;
+        border-bottom: 1px solid $borderColor;
+      }
+    }
+  }
+}
