@@ -1,13 +1,22 @@
 {
   "nodes": {
     "SitePage /dev-404-page/": {
+      "jsonName": "dev-404-page-5f9",
+      "internalComponentName": "ComponentDev404Page",
       "path": "/dev-404-page/",
+      "component": "/Users/bw/Documents/bw/lunchbot/.cache/dev-404-page.js",
+      "componentChunkName": "component---cache-dev-404-page-js",
+      "context": {},
+      "pluginCreator___NODE": "Plugin dev-404-page",
+      "pluginCreatorId": "Plugin dev-404-page",
+      "componentPath": "/Users/bw/Documents/bw/lunchbot/.cache/dev-404-page.js",
       "id": "SitePage /dev-404-page/",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "f91d29e10ba680b413138cf9ed86e655",
+        "contentDigest": "9c18037e484b4aead0523799afb03d37",
+        "description": "Plugin dev-404-page",
         "owner": "internal-data-bridge"
       }
     },
@@ -422,14 +431,16 @@
     },
     "Site": {
       "siteMetadata": {},
+      "port": "8000",
+      "host": "localhost",
       "pathPrefix": "/lunchbot",
       "polyfill": true,
-      "buildTime": "2018-08-23T14:55:42.184Z",
+      "buildTime": "2018-08-23T20:57:32.100Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "6ca61b0599442da9c1840a59a5eea1c7",
+        "contentDigest": "bd5465e8f14d1defce0bc486f41153ea",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -471,6 +482,10 @@
     "/Users/bw/Documents/bw/lunchbot/src/pages/index.js": {
       "query": "",
       "componentPath": "/Users/bw/Documents/bw/lunchbot/src/pages/index.js"
+    },
+    "/Users/bw/Documents/bw/lunchbot/.cache/dev-404-page.js": {
+      "query": "",
+      "componentPath": "/Users/bw/Documents/bw/lunchbot/.cache/dev-404-page.js"
     }
   },
   "staticQueryComponents": {}

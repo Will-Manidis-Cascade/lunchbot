@@ -1,16 +1,24 @@
-$color-primary: #ba5d16;
+body {
+  background: #e7f2ea;
+}
 
 .LunchBot {
-  margin: 50px auto;
-  max-width: 600px;
+  margin: 0 auto;
+  padding: 50px;
+  max-width: 650px;
 
   h1.pageTitle {
     font-size: 40px;
-    color: $color-primary;
+    color: #c2577b;
   }
 
   hr {
     margin: 50px 0;
+  }
+
+  h3 {
+    font-size: 24px;
+    font-weight: 300;
   }
 
   .placesList {
@@ -20,25 +28,62 @@ $color-primary: #ba5d16;
 
     & > li {
       $borderRadius: 5px;
-      $borderColor: #eee;
+      $borderColor: rgba(0, 0, 0, 0.1);
 
       border: 1px solid $borderColor;
       border-bottom: none;
-      padding: 10px 14px;
+      padding: 20px 20px;
+      font-size: 26px;
+      background: #fff;
 
-      &.-primary {
-        background: #f5f5f5;
-        font-weight: 600;
+      &:before {
+        display: block;
+        padding-bottom: 2px;
+
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 300;
+        color: #888;
+      }
+
+      &:nth-child(1) {
+        background: #82708e;
+        color: #fff;
+        font-weight: 500;
+
+        &:before {
+          content: 'My top suggestion';
+          color: #ccc;
+        }
+      }
+
+      &:nth-child(2):before {
+        content: 'Okay. What about';
+      }
+
+      &:nth-child(3):before {
+        content: 'Or maybe even';
       }
 
       &:first-child {
-        border-radius: $borderRadius $borderRadius 0 0;
+        border-top-left-radius: $borderRadius;
+        border-top-right-radius: $borderRadius;
       }
 
       &:last-child {
-        border-radius: 0 0 $borderRadius $borderRadius;
         border-bottom: 1px solid $borderColor;
+        border-bottom-left-radius: $borderRadius;
+        border-bottom-right-radius: $borderRadius;
       }
+    }
+  }
+
+  footer {
+    color: #888;
+    font-size: 14px;
+
+    a {
+      color: #60d5da;
     }
   }
 }
