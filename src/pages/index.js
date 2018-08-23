@@ -54,7 +54,9 @@ class LunchBot extends React.Component {
     return (
       <div className="LunchBot">
         <h1 className="pageTitle">I am the Lunchbot.</h1>
-        <p>Reducing the number of choices, one meal at a time.</p>
+        <p>
+          <span>Reducing the number of choices,</span> <span>one meal at a time.</span>
+        </p>
         <hr />
         <h3>May I humbly suggest &mdash;</h3>
         <ul className="placesList">
@@ -72,7 +74,7 @@ class LunchBot extends React.Component {
           </button>
         )}
         <div className="idempotent">
-          This link will give someone else the same options:
+          This link gives others the same options:
           <a href={href}>{href}</a>
         </div>
         <footer>
