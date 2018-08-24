@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactHelmet from 'react-helmet';
 import SeededShuffle from 'seededshuffle';
 import '../components/index/index.scss';
 
@@ -51,8 +52,20 @@ class LunchBot extends React.Component {
     // Get shuffled list
     const selection = SeededShuffle.shuffle(LUNCH_SPOTS, seed, true);
 
+    // Generate title/meta
+    const title = `How about ${selection[0]}?`;
+    const description = `Also consider: ${selection[1]} or ${selection[2]}`;
+
     return (
       <div className="LunchBot">
+        <ReactHelmet>
+          <title>{title}</title>
+          <meta property="og:title" content={title} />
+          <meta property="twitter:title" content={title} />
+          <meta name="description" content={description} />
+          <meta property="og:description" content={description} />
+          <meta name="twitter:description" content={description} />
+        </ReactHelmet>
         <h1 className="pageTitle">I am the Lunchbot.</h1>
         <p>
           <span>Reducing the number of choices,</span> <span>one meal at a time.</span>
