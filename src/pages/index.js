@@ -11,12 +11,13 @@ const LUNCH_SPOTS = [
   'Crema Cafe (sandwiches)',
   'b.good (burgers + salads)',
   'Pokeworks (poke)',
-  'BONME (sandwiches)',
+  'Bon Me food truck (sandwiches)',
   "Darwin's Ltd (sandwiches)",
   'Flour Bakery (sandwiches)',
   "Pinnochio's (pizza)",
   'Clover (sandwiches)',
   'Tatte Bakery (sandwiches + salads)',
+  'OTTO (pizza)',
 ];
 
 const now = new Date();
