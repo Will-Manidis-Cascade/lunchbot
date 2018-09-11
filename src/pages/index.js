@@ -5,19 +5,20 @@ import '../components/index/index.scss';
 
 const LUNCH_SPOTS = [
   'sweetgreen (salads)',
-  "Felipe's (burritos)",
-  'Zambrero (burrito bowls)',
-  'Shake Shack (burgers)',
+  'Bon Me (sandwiches)',
   'Crema Cafe (sandwiches)',
-  'b.good (burgers + salads)',
-  'Pokeworks (poke)',
-  'Bon Me food truck (sandwiches)',
-  "Darwin's Ltd (sandwiches)",
   'Flour Bakery (sandwiches)',
-  "Pinnochio's (pizza)",
+  'Pokeworks (poke)',
+  "Darwin's Ltd (sandwiches)",
+  "Felipe's (burritos)",
+  'Shake Shack (burgers)',
+  'b.good (burgers + salads)',
   'Clover (sandwiches)',
   'Tatte Bakery (sandwiches + salads)',
-  'OTTO (pizza)',
+
+  // 'Zambrero (burrito bowls)',
+  // 'OTTO (pizza)',
+  // "Pinnochio's (pizza)",
 ];
 
 const now = new Date();
@@ -54,8 +55,8 @@ class LunchBot extends React.Component {
     const selection = SeededShuffle.shuffle(LUNCH_SPOTS, seed, true);
 
     // Generate title/meta
-    const title = `How about ${selection[0]}?`;
-    const description = `Also consider: ${selection[1]} or ${selection[2]}`;
+    const title = 'The Lunchbot';
+    const description = `Answering "where should we eat" in Harvard Square.`;
 
     return (
       <div className="LunchBot">
