@@ -4,19 +4,33 @@ import SeededShuffle from 'seededshuffle';
 import '../components/index/index.scss';
 
 const LUNCH_SPOTS = [
-  'sweetgreen (salads)',
-  'Bon Me (sandwiches)',
+  // Sandwich places
   'Crema Cafe (sandwiches)',
   'Flour Bakery (sandwiches)',
-  'Pokeworks (poke)',
-  "Darwin's Ltd (sandwiches)",
+  'Tatte Bakery (sandwiches, salads)',
+  "Darwin's Ltd (sandwiches)", // Further away
+
+  // Heart of HSQ
+  'sweetgreen (salads)',
   "Felipe's (burritos)",
   'Shake Shack (burgers)',
-  'b.good (burgers + salads)',
-  'Clover (sandwiches)',
-  'Tatte Bakery (sandwiches + salads)',
+  'Black Sheep Bagel Cafe (bagels)',
 
+  // Smith Center
+  'Bon Me (sandwiches)',
+  'Saloniki (Greek, pita, salads)',
+  'Whole Heart Provisions (veg)',
+
+  'Clover (sandwiches) (veg)',
+  'b.good (burgers, bowls, salads)',
+  'Pokeworks (poke)',
+
+  // Places people don't seem to like
+  // ===================
   // 'Zambrero (burrito bowls)',
+
+  // Places not well-suited for lunch
+  // ===================
   // 'OTTO (pizza)',
   // "Pinnochio's (pizza)",
 ];
@@ -98,7 +112,7 @@ class LunchBot extends React.Component {
         <footer>
           {startingSeed === seed && (
             <>
-              The Lunchbot makes a new suggestion every day.
+              The Lunchbot makes a new Harvard Square suggestion every day or on demand.
               <br />
             </>
           )}
