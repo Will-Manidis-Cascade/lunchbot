@@ -77,8 +77,8 @@ class LunchBot extends React.Component {
     const selection = SeededShuffle.shuffle(LUNCH_SPOTS, seed, true);
 
     // Generate title/meta
-    const title = 'The Lunchbot';
-    const description = `Answering "where should we eat" in Harvard Square.`;
+    const title = 'The Harvard Square Lunchbot';
+    const description = `Answering "where should we eat" in Harvard Square. A tiny side project by Brandon Wang.`;
 
     return (
       <div className="LunchBot">
