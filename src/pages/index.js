@@ -50,7 +50,10 @@ const startingSeed = Number(
 
 class LunchBot extends React.Component {
   state = {
-    seed: this.props.location.search ? this.props.location.search.slice(1) : startingSeed,
+    seed:
+      this.props.location.search && this.props.location.search.startsWith('?tasty_')
+        ? this.props.location.search.slice(7)
+        : startingSeed,
     isMoreShown: false,
   };
 
@@ -71,7 +74,7 @@ class LunchBot extends React.Component {
     const { seed, isMoreShown } = this.state;
 
     // Get idempotent link
-    const href = location.origin + location.pathname + '?' + seed;
+    const href = location.origin + location.pathname + '?tasty_' + seed;
 
     // Get shuffled list
     const selection = SeededShuffle.shuffle(LUNCH_SPOTS, seed, true);
