@@ -4,7 +4,7 @@ import SeededShuffle from 'seededshuffle';
 import openGraphImage from '../components/OpenGraph.png';
 import '../components/index/index.scss';
 
-const BASE_URL = 'https://bw.github.io/lunchbot/';
+const BASE_URL = 'https://bw.github.io';
 
 const LUNCH_SPOTS = [
   // Sandwich places
