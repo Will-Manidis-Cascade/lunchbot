@@ -78,7 +78,7 @@ class LunchBot extends React.Component {
 
     // Generate title/meta
     const title = 'The Harvard Square Lunchbot';
-    const description = `Answering "where should we eat" in Harvard Square. A tiny side project by Brandon Wang.`;
+    const description = `Making tasty decisions. A tiny side project by Brandon Wang.`;
 
     return (
       <div className="LunchBot">
