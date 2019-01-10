@@ -5,25 +5,30 @@ import '../components/index/index.scss';
 
 const LUNCH_SPOTS = [
   // Sandwich places
-  'Crema Cafe (sandwiches)',
   'Flour Bakery (sandwiches)',
   'Tatte Bakery (sandwiches, salads)',
-  "Darwin's Ltd (sandwiches)", // Further away
 
-  // Heart of HSQ
+  // Central HSQ
   'sweetgreen (salads)',
-  "Felipe's (burritos)",
+  "Felipe's (Mexican) (burritos)",
   'Shake Shack (burgers)',
   'Black Sheep Bagel Cafe (bagels)',
+  "El Jefe's (Mexican)",
+  'Clover (sandwiches) (veg)',
+  'Pokeworks (poke)',
+  'b.good (burgers, bowls, salads)',
+
+  // Further away from HSQ
+  "Darwin's Ltd (sandwiches)", // Cambridge St
+  'Cafe Pamplona (Mediterranean) (paninis)',
+  "Zinnekin's (waffles)",
+  "Petsi's Pies (breakfast, sandwiches)",
 
   // Smith Center
-  'Bon Me (sandwiches)',
+  'Pavement Coffeehouse (bagels)',
+  'Bon Me (sandwiches, noodles)',
   'Saloniki (Greek, pita, salads)',
   'Whole Heart Provisions (veg)',
-
-  'Clover (sandwiches) (veg)',
-  'b.good (burgers, bowls, salads)',
-  'Pokeworks (poke)',
 
   // Places people don't seem to like
   // ===================
@@ -112,7 +117,8 @@ class LunchBot extends React.Component {
         <footer>
           {startingSeed === seed && (
             <>
-              The Lunchbot makes a new Harvard Square suggestion every day or on demand.
+              The Lunchbot makes a new fast-casual Harvard Square suggestion every day or
+              on demand.
               <br />
             </>
           )}
