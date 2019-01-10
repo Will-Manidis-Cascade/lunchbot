@@ -1,7 +1,10 @@
 import React from 'react';
 import ReactHelmet from 'react-helmet';
 import SeededShuffle from 'seededshuffle';
+import openGraphImage from '../components/OpenGraph.png';
 import '../components/index/index.scss';
+
+const BASE_URL = 'https://bw.github.io/lunchbot/';
 
 const LUNCH_SPOTS = [
   // Sandwich places
@@ -80,12 +83,22 @@ class LunchBot extends React.Component {
     return (
       <div className="LunchBot">
         <ReactHelmet>
+          <meta property="og:type" content="website" />
+          <meta name="twitter:card" content="summary" />
+          <meta name="twitter:site" content="@bradr" />
+          <meta name="twitter:creator" content="@bradr" />
+          <meta property="og:site_name" content="The Lunchbot" />
+
           <title>{title}</title>
           <meta property="og:title" content={title} />
           <meta property="twitter:title" content={title} />
+
           <meta name="description" content={description} />
           <meta property="og:description" content={description} />
           <meta name="twitter:description" content={description} />
+
+          <meta property="og:image" content={BASE_URL + openGraphImage} />
+          <meta name="twitter:image" content={BASE_URL + openGraphImage} />
         </ReactHelmet>
         <h1 className="pageTitle">I am the Lunchbot.</h1>
         <p>
