@@ -7,41 +7,26 @@ import '../components/index/index.scss';
 const BASE_URL = 'https://bw.github.io';
 
 const LUNCH_SPOTS = [
-  // Sandwich places
+
   'Flour Bakery (sandwiches)',
-  'Tatte Bakery (sandwiches, salads)',
+  'Smoke Shop (BBQ)',
+  'Lolita Cocina (Mexican)',
+  "Kitchen Cafe (Breakfast + Brunch)",
+  'Wheelhouse (Fast Lunch)',
+  'bartaco Seaport (Mexican)',
+  "Buco Trattoria (Italian)",
+  'Tatte (Tatte)',
+  'Bon Me',
+  'Yoki Express (Sushi)',
 
-  // Central HSQ
-  'sweetgreen (salads)',
-  "Felipe's (Mexican) (burritos)",
-  'Shake Shack (burgers)',
-  'Black Sheep Bagel Cafe (bagels)',
-  "El Jefe's (Mexican)",
-  'Clover (sandwiches) (veg)',
-  'Pokeworks (poke)',
-  'b.good (burgers, bowls, salads)',
+  "Sweetgreen)",
+  'Marco Polo (Deli)',
+  "Aceituna",
+  "Metro Cafe (Lunch)",
 
-  // Further away from HSQ
-  "Darwin's Ltd (sandwiches)", // Cambridge St
-  'Cafe Pamplona (Mediterranean) (paninis)',
-  "Zinnekin's (waffles)",
-  "Petsi's Pies (breakfast, sandwiches)",
-
-  // Smith Center
-  'Pavement Coffeehouse (bagels)',
-  'Bon Me (sandwiches, noodles)',
-  'Saloniki (Greek, pita, salads)',
-  'Whole Heart Provisions (veg)',
-
-  // Places people don't seem to like
-  // ===================
-  // 'Zambrero (burrito bowls)',
-
-  // Places not well-suited for lunch
-  // ===================
-  // 'OTTO (pizza)',
-  // "Pinnochio's (pizza)",
+  'Shake Shack',
 ];
+
 
 const now = new Date();
 const startingSeed = Number(
@@ -80,16 +65,16 @@ class LunchBot extends React.Component {
     const selection = SeededShuffle.shuffle(LUNCH_SPOTS, seed, true);
 
     // Generate title/meta
-    const title = 'The Harvard Square Lunchbot';
-    const description = `Making tasty decisions. A tiny side project by Brandon Wang.`;
+    const title = 'The Fort Point Lunchbot';
+    const description = `Making tasty decisions. A Cascade.Bio project, forked from Brandon Wang.`;
 
     return (
       <div className="LunchBot">
         <ReactHelmet>
           <meta property="og:type" content="website" />
           <meta name="twitter:card" content="summary" />
-          <meta name="twitter:site" content="@bradr" />
-          <meta name="twitter:creator" content="@bradr" />
+          <meta name="twitter:site" content="@willmanidis" />
+          <meta name="twitter:creator" content="@willmanidis" />
           <meta property="og:site_name" content="The Lunchbot" />
 
           <title>{title}</title>
@@ -133,12 +118,12 @@ class LunchBot extends React.Component {
         <footer>
           {startingSeed === seed && (
             <>
-              The Lunchbot makes a new fast-casual Harvard Square suggestion every day or
+              The Lunchbot makes a new fast-casual Fort POint suggestion every day or
               on demand.
               <br />
             </>
           )}
-          A fun little thing by <a href="https://brandon.wang">Brandon Wang</a>.
+          A fun little thing by <a href="https://brandon.wang">Brandon Wang</a>. Rebuilt by  <a href="https://WillManidis.com">Will Manidis</a> 
         </footer>
       </div>
     );
